@@ -1,0 +1,86 @@
+
+:root
+{
+    --linear-gradient: linear-gradient(90deg, rgba(12,0,255,1) 0%, rgba(85,0,255,0.9948354341736695) 50%, rgba(255,0,245,1) 100%);
+}
+
+main
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1
+{
+    position: relative;
+    font-size: 30rem;
+    line-height: 30rem;
+    font-weight: 900;
+    /* background: url(https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1193&q=80) no-repeat center fixed; */
+    /* Image Freepik gratuite : https://www.freepik.com/free-photo/3d-render-solar-system-background-with-colourful-nebula_10167213.htm#page=3&query=milky%20way&position=7&from_view=search */
+    background: url(https://img.freepik.com/free-photo/3d-render-solar-system-background-with-colourful-nebula_1048-12990.jpg?w=1060&t=st=1659991822~exp=1659992422~hmac=e9587aae32fe54f2dd71964421e96f6a055955bc634e05c9a5001c271fd57ff8) no-repeat center fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 auto;
+    animation: animatedBackground 20s linear infinite alternate;
+}
+
+h1::after
+{
+    position: absolute;
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+@keyframes animatedBackground {
+    from {
+      background-position: 40% 0;
+    }
+    to {
+      background-position: 60% 0;
+    }
+  }
+
+p
+{
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 20px 0 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a.btn
+{
+    background: var(--linear-gradient);
+    padding: 20px 50px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 30px;
+    transition: all ease 0.4s;
+}
+
+a.btn:hover
+{
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+}
+
+.blurred-text
+{
+    color: transparent;
+    text-shadow: 0 0 4px rgba(0,0,0,1);
+}
